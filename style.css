@@ -398,7 +398,7 @@ ul{
         margin-right: 15px;
     }
     .testimonials p,h1{
-        padding-left: 40px;
+        /* padding-left: 40px; we can remove this  */
     }
 }
 .cta{
