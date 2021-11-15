@@ -594,6 +594,7 @@ ul{
     flex-basis: 48%;
     margin-bottom: 30px;
     background-color: rgb(96, 0, 141);
+    padding: 1%;
 }
 .contact-col-info h3{
     text-align: left;
