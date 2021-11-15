@@ -561,7 +561,8 @@ ul{
 }
 .map{
     width: 80%;
-    margin: auto;
+    margin: 0;
+    margin-left: 1%;
 }
 .contact-col{
     flex-basis: 48%;
