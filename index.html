@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        
+    <head> 
         <title>University Website</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="images/icon.jpg">
@@ -12,7 +11,6 @@
     </head>
     <body onload="delay()">
         <div id="loading">
-
         </div>
         <section class="header">
             <nav>
@@ -34,7 +32,7 @@
             <div class="text-box">
                 <h1>Netaji Subhas University of Technology</h1>
                 <p>formerly known as Netaji Subhas Institute of Technology<br>(Govt. of NCT of Delhi)</p>
-                <a href="abut.html" class="hero-btn">Know More</a>
+                <a href="about.html" class="hero-btn">Know More</a>
         </section>
         <section class="course">
             <h1>Courses Offered Department Wise</h1>
@@ -68,7 +66,6 @@
         </section>
         <section class="campus">
             <h1>Our Campus</h1>
-            <p>abcdefghijklmnopqrstuvwxyz</p>
             <div class="row">
                 <div class="campus-col">
                     <a href="http://gecdelhi.ac.in/">
@@ -79,7 +76,7 @@
                     </a>
                 </div>
                 <div class="campus-col">
-                    <a href="http://aiactr.ac.in/">
+                    <a href="http://nsit.ac.in/">
                     <img src="images/nsut_main_campus.jpeg">
                     <div class="layer">
                         <h3>MAIN CAMPUS</h3>
@@ -87,7 +84,7 @@
                     </a>    
                 </div>
                 <div class="campus-col">
-                    <a href="http://nsit.ac.in/">
+                    <a href="http://aiactr.ac.in/">
                     <img src="images/nsut_east_campus.jpeg">
                     <div class="layer">
                         <h3>EAST CAMPUS</h3>
@@ -343,22 +340,13 @@
             showSlides(slideIndex += n);
             }
 
-            // Thumbnail image controls
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
-            }
-
             function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("course-col");
-            var dots = document.getElementsByClassName("dot");
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
@@ -376,9 +364,6 @@
                         }
                         slideIndex++;
                         if (slideIndex > slides.length) {slideIndex = 1}    
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
                         slides[slideIndex-1].style.display = "block";  
                         dots[slideIndex-1].className += " active";
                     }
