@@ -109,7 +109,9 @@ nav .fa{
     font-weight: bold;
     transition: 1s;
 }
+
 @media(max-width: 700px){
+    
     .text-box h1{
         font-size: 30px;
     }
@@ -129,7 +131,7 @@ nav .fa{
         height: 40%;
         width: 100%;
         top: 0px;
-        right: -200px;
+        right: -700px;
         text-align: left;
         z-index: 2;
         transition: 1s;
@@ -143,6 +145,9 @@ nav .fa{
     }
     .nav-links ul{
         padding: 10px;
+    }
+    .weather_widget_website{
+        
     }
 }
 .course{
@@ -397,9 +402,6 @@ ul{
         margin-left: 0px;
         margin-right: 15px;
     }
-    .testimonials p,h1{
-        /* padding-left: 40px; we can remove this  */
-    }
 }
 .cta{
     margin: 100px auto;
@@ -446,7 +448,7 @@ ul{
     width: auto;
 }
 .sub-header{
-    /* height: 60%; i guess that we dont need this lin of code */
+    /* height: 40vh;  */
     width: 100%;
     background-image: linear-gradient(rgba(96, 0, 141,0.488),rgba(96, 0, 141, 0.488)),url(images/banner.jpg);
     background-position: center;
@@ -642,7 +644,10 @@ ul{
     box-sizing:border-box;
 }
 .univ_name_address_phoneno{
-    margin:5% 15%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-right: 10%;
 }
 .univ_name_address_phoneno h5{
     color: white;
@@ -667,7 +672,7 @@ ul{
     margin:5% 0%;
 }
 .quick_links .link_list{
-    margin:5% 30%;
+    margin:5% 50%;
 }
 .quick_links .link_list .link-title{
     color: white;
@@ -689,11 +694,21 @@ ul{
     color:yellow;
 }
 .weather_widget_website{
-    margin:5% 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 50%;
 }
 .weather_widget_website .title{
     color: white;
     font-size: 18px;
     width: 100px;
     padding-bottom: 80px;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .quick_links .link_list{
+        margin:0;
+    }
 }
