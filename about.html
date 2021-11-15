@@ -10,7 +10,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body onload="delay()">
+        <div id="loading">
+        </div>
         <section class="sub-header">
             <nav>
                 <a href="index.html"><img src="images/logo.png"></a>
@@ -42,22 +44,11 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="footer">
-            <h4>About Us</h4>
-            <p>This is a University Website of NSUT.<br>Group 2.</p>
-            <div class="icons">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-instagram"></i>
-                <i class="fa fa-linkedin"></i>    
-            </div>
-            <p>Made by Aviral, Prateek, Yashasvee and Keshav.</p>
-        </section> -->
         <section class="footer">
             <div class="container">
-                <div class="row">
+                <div id ="footer_row" class="row">
                         <div class="univ_name_address_phoneno">
-							<a href="index.html"><img src="images/logo.png"></a>
+							<a href="index.html"><img class="footer_logo" src="images/logo.png"></a>
                             <h5 class="footer-title">Netaji Subhas University of Technology</h5>
 							<p>Dwarka Sector-3, Dwarka,<br> Delhi, 110078</p>
 							<ul>
@@ -66,7 +57,7 @@
 							</ul>
                         </div>
 					<div class="quick_links">
-						<div class="row">							
+						<div id ="footer_row"  class="row">							
 								<div class="link_list">
 									<h5 class="link-title">Quick Links</h5>
 									<ul>
@@ -165,7 +156,7 @@
 								</div>
 							</div>
 							<script type="text/javascript"> var css_file=document.createElement("link"); var widgetUrl = location.href; css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/booked-wzs-widget-275.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData_13082(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-weather-bl250-13082'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } var widgetSrc = "https://widgets.booked.net/weather/info?action=get_weather_info;ver=7;cityID=18038;type=3;scode=124;ltid=3458;domid=w209;anc_id=52839;countday=undefined;cmetric=1;wlangID=1;color=137AE9;wwidth=302;header_color=ffffff;text_color=333333;link_color=08488D;border_form=1;footer_color=ffffff;footer_text_color=333333;transparent=0;v=0.0.1";widgetSrc += ';ref=' + widgetUrl;widgetSrc += ';rand_id=13082';var weatherBookedScript = document.createElement("script"); weatherBookedScript.setAttribute("type", "text/javascript"); weatherBookedScript.src = widgetSrc; document.body.appendChild(weatherBookedScript) </script><!-- weather widget end -->
-						</div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -182,9 +173,18 @@
                 navLinks.style.right = "0";
             }
             function hideMenu(){
-                navLinks.style.right = "-700px";
+                navLinks.style.right = "-820px";
             }
         </script>
+		<script>
+			var preloader=document.getElementById('loading');
+			function delay(){
+				setInterval(myFunction,1000);
+			}
+			function myFunction(){
+				preloader.style.display='none';
+			}
+	   </script>
 
     </body>
 </html>
