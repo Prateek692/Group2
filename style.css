@@ -446,7 +446,7 @@ ul{
     width: auto;
 }
 .sub-header{
-    height: 40vh;
+    /* height: 60%; i guess that we dont need this lin of code */
     width: 100%;
     background-image: linear-gradient(rgba(96, 0, 141,0.488),rgba(96, 0, 141, 0.488)),url(images/banner.jpg);
     background-position: center;
