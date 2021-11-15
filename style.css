@@ -669,10 +669,10 @@ ul{
     padding: 0% 1%;
 }
 .quick_links{
-    margin:5% 0%;
+    margin:0 0%;
 }
 .quick_links .link_list{
-    margin:5% 50%;
+    margin:2vh 5vw;
 }
 .quick_links .link_list .link-title{
     color: white;
@@ -694,21 +694,44 @@ ul{
     color:yellow;
 }
 .weather_widget_website{
-    margin-top: 5%;
+    margin-top: 3.6vh;
     margin-bottom: 5%;
-    margin-left: 50%;
+    margin-left: 4vw;
 }
 .weather_widget_website .title{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
     width: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 }
-@media(max-width: 700px){
+#m-booked-weather-bl250-13082{
+    margin: 0 0;
+}
+@media(max-width: 1500px){
     .row{
         flex-direction: column;
     }
+    .univ_name_address_phoneno{
+        margin:0 0;
+        margin-top: 15px;
+    }
+    .footer_logo{
+        margin-left: 5.5vw;
+    }
+    .footer{
+        justify-content: center;
+    }
+    .container{
+        display: flexbox;
+        margin-left: 12vw;
+    }
     .quick_links .link_list{
-        margin:0;
+        margin:1vh 0;
+    }
+    .weather_widget_website{
+        margin:0 0;
+        margin-bottom: 25px;
     }
 }
