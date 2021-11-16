@@ -262,17 +262,28 @@ ul{
     background: #ffffff;
     border-radius: 10px;
     margin-bottom: 5%;
+    width: 25vw;
+    height: 37vh;
     box-sizing: border-box;
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
     padding:20px 12px;
     margin:0 20px;
+}
+.course-col-detailed h3{
+    text-align: center;
+    font-size: 25px;
+}
+.course-col-detailed p{
+    text-align: center;
+    color: gray;
+    font-size: 15px;
 }
 .course h2{
     padding-top: 20px;
     font-size: 20px;
 }
 .course-col-detailed img{
-    min-width: 90%;
+    min-width: 24vw;
     height: 250px;
     border-radius: 3%;
 }
