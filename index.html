@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="images/icon.jpg">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" >
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="testimonial-col">
                     <img src="images/testimonials/kesav.jpeg">
-                    <h3>Keshav</h3>
+                    <h3>Keshav(ex ANUSUTian)</h3>
                 <h4>Rating:</h4>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -327,8 +327,7 @@
                 for (i = 0; i < dots.length; i++) {
                     dots[i].className = dots[i].className.replace(" active", "");
                 }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
+                slides[slideIndex-1].style.display = "block";
             }
         </script>
         <script>/*For manual change in slides*/
@@ -349,7 +348,6 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
             }
         </script>
         <script> /*For automatic change of slides*/
@@ -365,7 +363,6 @@
                         slideIndex++;
                         if (slideIndex > slides.length) {slideIndex = 1}    
                         slides[slideIndex-1].style.display = "block";  
-                        dots[slideIndex-1].className += " active";
                     }
         </script>
         <script>/*For manual change in slides*/
@@ -395,7 +392,6 @@
                         dots[i].className = dots[i].className.replace(" active", "");
                     }
                     slides[slideIndex-1].style.display = "block";
-                    dots[slideIndex-1].className += " active";
                     }
         </script>
         <script>
