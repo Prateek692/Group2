@@ -175,7 +175,8 @@ ul{
     display: flex;
     justify-content: space-between;
     /*slideshow part*/
-    max-width: 1000px;
+    max-width: 1300px;
+    height: auto;
     position: relative;
     margin: auto;
 }
@@ -246,7 +247,7 @@ ul{
 }
 .course-col img{
     min-width: 90%;
-    height: 400px;
+    height: 450px;
     padding:0% 4.5%;
 }
 .course-row{
@@ -302,9 +303,8 @@ ul{
     overflow: hidden;
 }
 .campus-col img{
-    width: 90vw;
-    height: 50vh;
-    display: block;
+    width: 900px;
+    height: 500px;
 }
 .layer{
     background: transparent;
@@ -369,7 +369,7 @@ ul{
 }
 .facilities-col img{
     min-width: 90%;
-    height: 400px;
+    height: 450px;
     padding:0% 4.5%;
 }
 .testimonials{
