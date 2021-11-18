@@ -6,11 +6,27 @@
     padding: 18px;
     width: 100%;
     text-align: left;
-    border: none;
+    border: 1px solid black;
     outline: none;
     transition: 0.4s;
+    margin-top: 5%;
   }
-  
+  .faqs {
+    margin: 1% 10%;
+    width: 80%;
+  }
+  .faqs h1{
+    margin-bottom: 2%;
+  }
+  .faqs h3{
+    font-weight: lighter;
+    margin-bottom: 2%;
+    font-size: 15px;
+  }
+  .fa{
+    margin-left: 100%;
+  }
+
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
     background-color: #ccc;
@@ -22,4 +38,9 @@
     background-color: white;
     display: none;
     overflow: hidden;
+    border: 1px solid black;
+  }
+  .form{
+    width: 50%;
+    margin: 2% 0% 2% 30%;
   }
