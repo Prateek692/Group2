@@ -303,99 +303,11 @@
                 </div>
             </div>
         </section>
-        <script> /*For menu in mobile devices*/
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.right = "0";
-            }
-            function hideMenu(){
-                navLinks.style.right = "-820px";
-            }
-        </script>
-        <script> /*For automatic change of slides*/
-            var slideIndex = 0;
-            setInterval(showSlidesc,3000);
-            function showSlidesc() {
-                var i;
-                var slides = document.getElementsByClassName("course-col");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}    
-                slides[slideIndex-1].style.display = "block";
-            }
-        </script>
-        <script>/*For manual change in slides*/
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
-            }
-
-            function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("course-col");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex-1].style.display = "block";
-            }
-        </script>
-        <script> /*For automatic change of slides*/
-                    var slideIndex = 0;
-                    setInterval(showSlidesf,5000);
-                    function showSlidesf() {
-                        var i;
-                        var slides = document.getElementsByClassName("facilities-col");
-                        var dots = document.getElementsByClassName("dot");
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";  
-                        }
-                        slideIndex++;
-                        if (slideIndex > slides.length) {slideIndex = 1}    
-                        slides[slideIndex-1].style.display = "block";  
-                    }
-        </script>
-        <script>/*For manual change in slides*/
-                    var slideIndex = 1;
-                    showSlides(slideIndex);
-        
-                    // Next/previous controls
-                    function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                    }
-        
-                    // Thumbnail image controls
-                    function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                    }
-        
-                    function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("facilities-col");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slides[slideIndex-1].style.display = "block";
-                    }
-        </script>
-        <script>
-             var preloader=document.getElementById('loading');
-             function delay(){
-                 setInterval(myFunction,2000);
-             }
-             function myFunction(){
-                 preloader.style.display='none';
-             }
-        </script>
+        <script type="text/javascript" src="javascript/course_auto.js"> /*For automatic change of slides*/</script>
+        <script type="text/javascript" src="javascript/course_manual.js">/*For manual change in slides*/</script>
+        <script type="text/javascript" src="javascript/facilities_auto.js"> /*For automatic change of slides*/</script>
+        <script type="text/javascript" src="javascript/facilities_manual.js">/*For manual change in slides*/</script>
+        <script type="text/javascript" src="javascript/loader.js">/*Loader*/</script>
+        <script type="text/javascript" src="javascript/menu.js"> /*For menu in mobile devices*/</script>
     </body>
 </html>
