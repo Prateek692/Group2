@@ -1,0 +1,25 @@
+.notice-box{
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    width: 250px;
+    height: 37vh;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    padding:20px 12px;
+    margin:0 20px;
+}
+.notice-box h3{
+    text-align: center;
+    font-size: 25px;
+}
+.notice-box p{
+    text-align: center;
+    color: gray;
+    font-size: 15px;
+}
+.notice-box img{
+    min-width: 24vw;
+    height: 20vh;
+    border-radius: 3%;
+}
