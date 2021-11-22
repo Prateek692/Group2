@@ -4,7 +4,15 @@
 * {
 	box-sizing: border-box;
 }
-
+/*Loader*/
+#loading{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background: #28282A url('/1481.gif') no-repeat center center;
+    z-index: 696969;
+}
+/*Loader ends*/
 body {
 	background: #f6f5f7;
 	display: flex;
@@ -225,28 +233,156 @@ input {
 	height: 40px;
 	width: 40px;
 }
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
+/*Subheader*/
+.sub-header{
+    height: 48vh;  
+    width: 100%;
+    background-position: center;
+    background-size:cover;
     text-align: center;
-    z-index: 999;
+    color: #fff;
 }
 
-footer p {
-    margin: 10px 0;
+/*End of Subheader*/
+nav{
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+    position: relative;
+    padding: 0% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 130px;  
+    padding-top: 7%; 
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
 }
 
-footer i {
-    color: red;
+.nav-links ul li a:hover{
+    color: yellow;
+    transition: 1s;
+    font-weight: bold;
 }
-
-footer a {
-    color: #3c97bf;
+nav .fa{
+    display: none;
+}
+/*Bottom Footer
+.footer-bottom{
+    align-items: center;
+	width: 100%;
+    background-color: #222;
+}
+.makers{
+    color: #f0f0f0;
+    font-family:monospace;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 2%;
+    width: auto;
+}
+/*End
+.footer{
+    display: inline-flex;
+    align-items: center;
+    background-color: #222;
+    width: 100%;
+}
+.footer img{
+    width:130px;
+}
+.footer .fa{
+    position: absolute;
+}
+.quick_links{
+    margin:0 0%;
+}
+.quick_links .link_list{
+    margin:2vh 5vw;
+}
+.quick_links .link_list .link-title{
+    color: white;
+    font-size: 18px;
+    width: 100px;
+    padding-bottom: 30px;
+}
+.quick_links ul{
+    list-style: none;
+}
+.quick_links ul li{
+    margin-bottom: 10%;
+}
+.quick_links ul li a{
+    color: rgb(116, 116, 116);
     text-decoration: none;
 }
+.quick_links ul li a:hover{
+    color:yellow;
+}
+.weather_widget_website{
+    margin-top: 3.6vh;
+    margin-bottom: 5%;
+    margin-left: 4vw;
+}
+.weather_widget_website .title{
+    color: white;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    width: 100px;
+    padding-bottom: 50px;
+}
+#m-booked-weather-bl250-13082{
+    margin: 0 0;
+}
+.row{
+    margin-top: 2%;
+    padding-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    /*slideshow part
+    max-width: 1300px;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+.univ_name_address_phoneno{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.univ_name_address_phoneno h5{
+    color: white;
+    font-size: 15px;
+    margin-top: 5%;
+    width:400px;
+}
+.univ_name_address_phoneno p{
+    color: rgb(116, 116, 116);
+    margin-top: 5% ;
+    font-size: 15px;
+}
+.univ_name_address_phoneno ul{
+    list-style: none;
+    margin-top: 10%;   
+}
+.univ_name_address_phoneno ul li a{
+    color: rgb(116, 116, 116);
+    padding: 0% 1%;
+}
+*/

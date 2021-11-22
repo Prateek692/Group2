@@ -47,7 +47,7 @@ nav img{
     width: 130px;  
     padding-top: 7%; 
 }
-nav-links{
+.nav-links{
     flex: 1;
     text-align: right;
 }
