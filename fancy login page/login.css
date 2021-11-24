@@ -20,7 +20,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
-	height: 50vh;
+	height: 100vh;
 	margin: -20px 0 50px;
 }
 
@@ -267,7 +267,7 @@ nav img{
 nav .fa{
     display: none;
 }
-
+/*Bottom Footer
 .footer-bottom{
     align-items: center;
 	width: 100%;
@@ -281,7 +281,7 @@ nav .fa{
     padding-bottom: 2%;
     width: auto;
 }
-
+/*End
 .footer{
     display: inline-flex;
     align-items: center;
@@ -340,7 +340,7 @@ nav .fa{
     padding-top: 3%;
     display: flex;
     justify-content: space-between;
-    slideshow part
+    /*slideshow part
     max-width: 1300px;
     height: auto;
     position: relative;
@@ -370,3 +370,4 @@ nav .fa{
     color: rgb(116, 116, 116);
     padding: 0% 1%;
 }
+*/
