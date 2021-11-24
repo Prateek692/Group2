@@ -4,7 +4,7 @@
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <title>University Website</title>
         <link rel="icon" href="/images/icon.jpg">
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body onload="delay()">
@@ -33,7 +33,6 @@
         <div class="form-container sign-up-container">
             <form action="#">
                 <h1>Create Account</h1>
-                
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
@@ -41,11 +40,10 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="post">
                 <h1>Sign in</h1>
-                
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" placeholder="Email" id="text" name="user_name">
+                <input type="password" id="text" name="password" placeholder="Password" >
                 <a href="#">Forgot your password?</a>
                 <button>Sign In</button>
             </form>
