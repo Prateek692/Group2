@@ -262,9 +262,10 @@ ul{
     background: #ffffff;
     border-radius: 10px;
     margin-bottom: 5%;
-    width: 25vw;
-    height: 37vh;
+    width: 500px;
+    height: 370px;
     box-sizing: border-box;
+    text-align: center;
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
     padding:20px 12px;
     margin:0 20px;
