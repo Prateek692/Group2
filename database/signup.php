@@ -3,8 +3,6 @@ session_start();
 
 	include("connection.php");
 	include("functions.php");
-
-
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
 		//something was posted
@@ -13,18 +11,20 @@ session_start();
 
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
-
 			//save to database
-			$user_id = random_num(20);
-			$query = "insert into users (id,username,password) values ('$user_id','$user_name','$password')";
-
-			mysqli_query($con, $query);
-
+			$id=random_num(10);
+			$query = "insert into users (id,rollno,password) values ('$id','$user_name','$password')";
+			if(!mysqli_query($con, $query)){
+				header("Location: notcreated.html");
+				die;
+			}
 			header("Location: login.html");
 			die;
-		}else
+		}
+		else
 		{
-			echo "Please enter some valid information!";
+			header("Location: notcreated.html");
+			die;
 		}
 	}
 ?>

@@ -1,27 +1,55 @@
 <?php 
+
 session_start();
 
 	include("connection.php");
 	include("functions.php");
 
-	$user_data = check_login($con);
+
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$user_name = $_POST['user_name'];
+		$password = $_POST['password'];
+
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		{
+
+			//read from database
+			$query = "select * from users where username = '$user_name' limit 1";
+			$result = mysqli_query($con, $query);
+
+			if($result)
+			{
+				if($result && mysqli_num_rows($result) > 0)
+				{
+
+					$user_data = mysqli_fetch_assoc($result);
+					
+					if($user_data['password'] === $password)
+					{
+						$_SESSION['id'] = $user_data['id'];	
+					}
+          else
+          {
+            header("Location: fail.html");
+            die;
+          }
+				}
+        else{
+          header("Location: fail.html");
+          die;
+        }
+			}
+		}
+    else
+		{
+			header("Location: fail.html");
+      die;
+		}
+	}
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -48,13 +76,13 @@ session_start();
 <div class="student-profile">
         <div class="card">
             <div class="card-header">
-              <img class="profile_img" src="https://placeimg.com/640/480/arch/any" alt="">
-              <h3><?php echo $user_data['username']; ?></h3>
+              <img class="profile_img" src="<?php echo $user_data['id']; ?>.jpeg" alt="">
+              <h3><?php echo $user_data['name']; ?></h3>
             </div>
             <div class="card-body">
-              <p class="mb-0"><strong class="pr-1">Roll No:</strong>321000001</p>
-              <p class="mb-0"><strong class="pr-1">Date of Birth:</strong>4</p>
-              <p class="mb-0"><strong class="pr-1">Gender:</strong>A</p>
+              <p class="mb-0"><strong class="pr-1">Roll No:</strong><?php echo $user_data['rollno']; ?></p>
+              <p class="mb-0"><strong class="pr-1">Date of Birth:</strong><?php echo $user_data['dob']; ?></p>
+              <p class="mb-0"><strong class="pr-1">Gender:</strong><?php echo $user_data['gender']; ?></p>
             </div>
         </div>
         <div class="card">
@@ -66,42 +94,42 @@ session_start();
                 <tr>
                   <th width="30%">Degree</th>
                   <td width="2%">:</td>
-                  <td>125</td>
+                  <td><?php echo $user_data['degree']; ?></td>
                 </tr>
                 <tr>
                   <th width="30%">Branch Name</th>
                   <td width="2%">:</td>
-                  <td>2020</td>
+                  <td><?php echo $user_data['bname']; ?></td>
                 </tr>
                 <tr>
                   <th width="30%">Specialization</th>
                   <td width="2%">:</td>
-                  <td>Group</td>
+                  <td><?php echo $user_data['spec']; ?></td>
                 </tr>
                 <tr>
                   <th width="30%">Section</th>
                   <td width="2%">:</td>
-                  <td>B+</td>
+                  <td><?php echo $user_data['sec']; ?></td>
                 </tr>
                 <tr>
                   <th width="30%">Blood Group</th>
                   <td width="2%">:</td>
-                  <td>Male</td>
+                  <td><?php echo $user_data['blood']; ?></td>
                 </tr>
                 <tr>
                   <th width="30%">Mobile No</th>
                   <td width="2%">:</td>
-                  <td>Male</td>
+                  <td><?php echo $user_data['mobile']; ?></td>
                 </tr>
                 <tr>
                   <th width="30%">Email Address</th>
                   <td width="2%">:</td>
-                  <td>Male</td>
+                  <td><?php echo $user_data['email']; ?></td>
                 </tr>
                 <tr>
                   <th width="30%">Residential Address</th>
                   <td width="2%">:</td>
-                  <td>Male</td>
+                  <td><?php echo $user_data['address']; ?></td>
                 </tr>
               </table>
             </div>
@@ -118,27 +146,27 @@ session_start();
               <tr>
                 <th width="30%">Web Technology</th>
                 <td width="2%">:</td>
-                <td>125</td>
+                <td><?php echo $user_data['c1']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Computer Architecture and Organization</th>
                 <td width="2%">:</td>
-                <td>2020</td>
+                <td><?php echo $user_data['c2']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Database Management System</th>
                 <td width="2%">:</td>
-                <td>Group</td>
+                <td><?php echo $user_data['c3']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Design and Analysis of Algorithms</th>
                 <td width="2%">:</td>
-                <td>B+</td>
+                <td><?php echo $user_data['c4']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Microprocessors and Microcontrollers</th>
                 <td width="2%">:</td>
-                <td>Male</td>
+                <td><?php echo $user_data['c5']; ?></td>
               </tr>
             </table>
           </div>
@@ -152,42 +180,42 @@ session_start();
               <tr>
                 <th width="30%">Semester 1</th>
                 <td width="2%">:</td>
-                <td>125</td>
+                <td><?php echo $user_data['s1']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Semester 2</th>
                 <td width="2%">:</td>
-                <td>2020</td>
+                <td><?php echo $user_data['s2']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Semester 3</th>
                 <td width="2%">:</td>
-                <td>Group</td>
+                <td><?php echo $user_data['s3']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Semester 4</th>
                 <td width="2%">:</td>
-                <td>Group</td>
+                <td><?php echo $user_data['s4']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Semester 5</th>
                 <td width="2%">:</td>
-                <td>Group</td>
+                <td><?php echo $user_data['s5']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Semester 6</th>
                 <td width="2%">:</td>
-                <td>Group</td>
+                <td><?php echo $user_data['s6']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Semester 7</th>
                 <td width="2%">:</td>
-                <td>Group</td>
+                <td><?php echo $user_data['s7']; ?></td>
               </tr>
               <tr>
                 <th width="30%">Semester 8</th>
                 <td width="2%">:</td>
-                <td>Group</td>
+                <td><?php echo $user_data['s8']; ?></td>
               </tr>
             </table>
           </div>
