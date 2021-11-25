@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <title>University Website</title>
-        <link rel="icon" href="/images/icon.jpg">
+        <link rel="icon" href="icon.jpg">
         <link rel="stylesheet" href="login.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -13,7 +13,7 @@
     
         <section class="sub-header">
             <nav>
-                <a href="index.html"><img src="images/logo.png"></a>
+                <a href="index.html"><img src="logo.png"></a>
                 <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()"></i>
 				<ul>
@@ -31,7 +31,7 @@
         </section>
     <div class="login-container" id="login-container">
         <div class="form-container sign-up-container">
-            <form action="php/signup.php" method="post">
+            <form action="signup.php" method="post">
                 <h1>Create Account</h1>
                 <input type="text" placeholder="Username" id="text" name="user_name">
                 <input type="password" id="text" name="password" placeholder="Password" >
@@ -39,7 +39,7 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="php/login.php" method="post">
+            <form action="login.php" method="post">
                 <h1>Sign in</h1>
                 <input type="text" placeholder="Username" id="text" name="user_name">
                 <input type="password" id="text" name="password" placeholder="Password" >
@@ -62,8 +62,36 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="javascript/login.js"></script>
-    <script type="text/javascript" src="javascript/loader.js">/*Loader*/</script>
-    <script type="text/javascript" src="javascript/menu.js"> /*For menu in mobile devices*/</script>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('login-container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+    </script>
+    <script>/*Loader*/
+    var preloader=document.getElementById('loading');
+             function delay(){
+                 setInterval(myFunction,1500);
+             }
+             function myFunction(){
+                 preloader.style.display='none';
+             }
+    </script>
+    <script> /*For menu in mobile devices*/
+    var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-820px";
+            }
+    </script>
     </body>
 </html>

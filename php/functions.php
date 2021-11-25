@@ -19,7 +19,7 @@ function check_login($con)
 	}
 
 	//redirect to login
-	header("Location: login.php");
+	header("Location: index.php");
 	die;
 
 }
@@ -43,3 +43,4 @@ function random_num($length)
 
 	return $text;
 }
+?>

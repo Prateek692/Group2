@@ -1,3 +1,31 @@
+<?php 
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+	$user_data = check_login($con);
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +41,7 @@
     <div id="loading">
     </div>
     <div class="logout">
-      <a href="php/logout.php"><button>Logout</button></a>
+      <a href="login.html"><button>Logout</button></a>
     </div>
     <h1 style="color: black; font-size: 40px; text-align: center;">Student Profile</h1>
 <!-- Student Profile -->
@@ -21,7 +49,7 @@
         <div class="card">
             <div class="card-header">
               <img class="profile_img" src="https://placeimg.com/640/480/arch/any" alt="">
-              <h3>Name of the Student</h3>
+              <h3><?php echo $user_data['username']; ?></h3>
             </div>
             <div class="card-body">
               <p class="mb-0"><strong class="pr-1">Roll No:</strong>321000001</p>
@@ -166,5 +194,13 @@
         </div>
 </div>
 </body>
-    <script type="text/javascript" src="javascript/loader.js">/*Loader*/</script>
+    <script>/*Loader*/
+    var preloader=document.getElementById('loading');
+             function delay(){
+                 setInterval(myFunction,1500);
+             }
+             function myFunction(){
+                 preloader.style.display='none';
+             }
+    </script>
 </html>
