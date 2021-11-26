@@ -67,9 +67,10 @@ session_start();
     </head>
 <body onload="delay()">
     <div id="loading">
-    </div>
+    </div> 
     <div class="logout">
-      <a href="login.html"><button>Logout</button></a>
+    <img id="logo" src="images/logo.png">
+      <a class="butt" href="login.html"><button>Logout</button></a>
     </div>
     <h1 style="color: black; font-size: 40px; text-align: center;">Student Profile</h1>
 <!-- Student Profile -->
