@@ -388,7 +388,7 @@ ul{
     width: 100%;
     margin: auto;
     padding-top: 100px;
-    background-image:linear-gradient(rgba(128, 0, 128, 0.5),rgba(128, 0, 128, 0.5)),url(images/banner2.jpg);
+    background-image:linear-gradient(rgba(128, 0, 128, 0.5),rgba(128, 0, 128, 0.5));
 }
 .row_testimonials{
     margin-top: 2%;
@@ -435,6 +435,9 @@ ul{
     padding-left:0px
 }
 @media(max-width: 820px){
+    .testimonials{
+        height:600px;
+    }
     .testimonial-col img{
         margin-left: 0px;
         margin-right: 15px;
